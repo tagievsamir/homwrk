@@ -13,18 +13,47 @@ public class Main {
         System.out.println(checkYear(4));//9
         //10.Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ].
         //С помощью цикла и условия заменить 0 на 1, 1 на 0;
-        int[] array = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == 0) {
-                array[i] = 1;
-            } else array[i] = 0;
+        int[] binaryArray = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        for (int i = 0; i < binaryArray.length; i++) {
+            if (binaryArray[i] == 0) {
+                binaryArray[i] = 1;
+            } else binaryArray[i] = 0;
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(binaryArray));
+        //11.Задать пустой целочисленный массив длиной 100. С помощью цикла заполнить его значениями 1 2 3 4 5 6 7 8 ... 100;
+        int[] sequenceArray = new int[100];
+        for (int i = 0; i <100; i++) {
+            sequenceArray[i] = i + 1;
+        }
+        System.out.println(Arrays.toString(sequenceArray));
+        //12. Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом, и числа меньшие 6 умножить на 2;
+        int[] modArray = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < modArray.length; i++){
+            if (modArray[i] < 6) {
+                modArray[i] *= 2;
+            }
+        }
+        System.out.println(Arrays.toString(modArray));
+        //13.Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
+        //и с помощью цикла(-ов) заполнить его диагональные элементы единицами (можно только одну из диагоналей, если обе сложно).
+        //Определить элементы одной из диагоналей можно по следующему принципу: индексы таких элементов равны,
+        //то есть [0][0], [1][1], [2][2], ..., [n][n];
+        int[][] matrixArray = new int[5][5];
+        for (int i = 0; i < 5; i++) {
+            matrixArray[i][i] = 1;
+            matrixArray[i][matrixArray[i].length -1 -i] = 1;
+        }
+        for (int i = 0; i < matrixArray.length; i++) {
+            for (int j = 0; j < matrixArray[i].length; j++) {
+                System.out.print(matrixArray[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
     /*1.Создайте метод printThreeWords(), который при вызове должен
     отпечатать в столбец три слова: Orange, Banana, Apple*/
     public static void printThreeWords() {
-        System.out.println ("Orange");
+        System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
