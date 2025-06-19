@@ -2,17 +2,17 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        printThreeWords();//1
-        checkSumSign();//2
-        printColor();//3
-        compareNumbers();//4
-        System.out.println(sumRange(1000,2));//5
-        checkNumber(-23);//6
-        System.out.println(isNegative(-2));//7
-        printStringNTimes("Hello", 4);//8
-        System.out.println(checkYear(4));//9
-        //10.Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ].
-        //С помощью цикла и условия заменить 0 на 1, 1 на 0;
+        /*1*/printThreeWords();
+        /*2*/checkSumSign();
+        /*3*/printColor();
+        /*4*/compareNumbers();
+        /*5*/System.out.println(sumRange(1000,2));
+        /*6*/checkNumber(-23);
+        /*7*/System.out.println(isNegative(-2));
+        /*8*/printStringNTimes("Hello", 4);
+        /*9*/System.out.println(checkYear(4));
+        /*10.Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ].
+        С помощью цикла и условия заменить 0 на 1, 1 на 0;*/
         int[] binaryArray = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         for (int i = 0; i < binaryArray.length; i++) {
             if (binaryArray[i] == 0) {
@@ -49,8 +49,8 @@ public class Main {
             }
             System.out.println();
         }
-        int[] arr = createIntArray(4,5);//14
-        System.out.println(Arrays.toString(arr));//14
+        /*14*/int[] arr = createIntArray(4,5);
+        /*14*/System.out.println(Arrays.toString(arr));
     }
     /*1.Создайте метод printThreeWords(), который при вызове должен
     отпечатать в столбец три слова: Orange, Banana, Apple*/
