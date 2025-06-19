@@ -49,6 +49,8 @@ public class Main {
             }
             System.out.println();
         }
+        int[] arr = createIntArray(4,5);//14
+        System.out.println(Arrays.toString(arr));//14
     }
     /*1.Создайте метод printThreeWords(), который при вызове должен
     отпечатать в столбец три слова: Orange, Banana, Apple*/
@@ -126,5 +128,14 @@ public class Main {
     //не високосный - false). Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
     public static boolean checkYear(int year) {
         return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+    }
+    //14.Написать метод, принимающий на вход два аргумента: len и initialValue, и возвращающий
+    //одномерный массив типа int длиной len, каждая ячейка которого равна initialValue.
+    public static int[] createIntArray(int len, int initialValue) {
+        int[] result = new int[len];
+        for( int i = 0; i < len; i++) {
+            result[i] = initialValue;
+        }
+        return result;
     }
 }
