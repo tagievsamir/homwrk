@@ -12,38 +12,24 @@
 (это сделано для упрощения логики программы).
 Создать массив котов и миску с едой, попросить всех котов покушать из этой миски и потом вывести информацию о сытости котов в консоль.
 Добавить метод, с помощью которого можно было бы добавлять еду в миску*/
-public abstract class Animal {
-    private static int animalCounter;
+public class Bowl {
+    private int food;
 
-    protected String name;
-
-    public Animal(String name) {
-        this.name = name;
-        animalCounter++;
+    public Bowl(int food) {
+        this.food = food;
     }
-    public static int getAnimalCounter() {
-        return animalCounter;
+    public int getFood() {
+        return food;
     }
-    public void run (int distance) {
-        if(distance < 0) {
-            System.out.println("Расстояние должно быть положительным числом");
-            return;
+    public int addFood(int amount) {
+        if(amount < 0) {
+            System.out.println("Количество еды не может быть отрицательным");
+            return this.food;
         }
-        if (distance == 0) {
-            System.out.println(name + " стоит на месте");
-            return;
+        else {
+            this.food += amount;
+            return this.food;
         }
-        System.out.println(name + " пробежал " + distance + " м.");
     }
-    public void swim (int distance) {
-        if(distance < 0) {
-            System.out.println("Расстояние должно быть положительным числом");
-            return;
-        }
-        if(distance == 0) {
-            System.out.println(name + " остаётся на месте");
-            return;
-        }
-        System.out.println(name + " проплыл " + distance + " м.");
-    }
+    public boolean
 }
