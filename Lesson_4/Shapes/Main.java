@@ -7,7 +7,6 @@ public class Main {
                 new Rectangle(4, 6, "Жёлтый", "Синий"),
                 new Triangle(3, 4, 5, "Зелёный", "Белый")
         };
-
         for (Shape shape : shapes) {
             System.out.println("Фигура: " + shape.getClass().getSimpleName());
             System.out.println("Площадь: " + shape.getArea());
