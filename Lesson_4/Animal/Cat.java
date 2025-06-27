@@ -1,3 +1,5 @@
+package Animal;
+
 /*Задание 1
 Создать классы Собака и Кот с наследованием от класса Животное.
 Все животные могут бежать и плыть. В качестве параметра каждому методу передается длина препятствия.
@@ -15,12 +17,15 @@
 public class Cat extends Animal {
     private static int catCounter;
 
-    public Cat(String name) {
+    private boolean full;
+
+    private int appetite;
+
+    public Cat(String name, int appetite) {
         super(name);
+        this.appetite = appetite;
         catCounter++;
-    }
-    public static int getCatCounter() {
-        return catCounter;
+        this.full = false;
     }
     @Override
     public void run(int distance) {
@@ -34,5 +39,20 @@ public class Cat extends Animal {
     @Override
     public void swim(int distance) {
         System.out.println(name + " не умеет плавать");
+    }
+    public void eat(Bowl bowl){
+        if(full) {
+            System.out.println(name + " уже сыт.");
+            return;
+        }
+        if (bowl.decreaseFood(appetite)) {
+            full = true;
+        }
+    }
+    public static int getCatCounter() {
+        return catCounter;
+    }
+    public boolean isFull() {
+        return full;
     }
 }

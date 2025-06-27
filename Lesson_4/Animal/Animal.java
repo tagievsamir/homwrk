@@ -1,3 +1,5 @@
+package Animal;
+
 /*Задание 1
 Создать классы Собака и Кот с наследованием от класса Животное.
 Все животные могут бежать и плыть. В качестве параметра каждому методу передается длина препятствия.
@@ -45,5 +47,8 @@ public abstract class Animal {
             return;
         }
         System.out.println(name + " проплыл " + distance + " м.");
+    }
+    public String getName() {
+        return name;
     }
 }

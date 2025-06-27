@@ -1,3 +1,5 @@
+package Animal;
+
 /*Задание 1
 Создать классы Собака и Кот с наследованием от класса Животное.
 Все животные могут бежать и плыть. В качестве параметра каждому методу передается длина препятствия.
@@ -18,9 +20,6 @@ public class Bowl {
     public Bowl(int food) {
         this.food = food;
     }
-    public int getFood() {
-        return food;
-    }
     public int addFood(int amount) {
         if(amount < 0) {
             System.out.println("Количество еды не может быть отрицательным");
@@ -31,5 +30,19 @@ public class Bowl {
             return this.food;
         }
     }
-    public boolean
+    public boolean decreaseFood(int amount) {
+        if(amount <= 0) {
+            System.out.println("Некорректное количество еды");
+            return false;
+        }
+        if(this.food < amount) {
+            System.out.println("В миске мало еды");
+            return false;
+        }
+        this.food -=amount;
+        return true;
+    }
+    public int getFood() {
+        return food;
+    }
 }
