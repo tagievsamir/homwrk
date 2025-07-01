@@ -17,7 +17,7 @@ public class Main {
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
-//Напишите код для генерации и поимки ArrayIndexOutOfBoundsException.
+//4.Напишите код для генерации и поимки ArrayIndexOutOfBoundsException.
         int[] array = new int[3];
         try {
             for (int i = 0; i < 4; i++) {
