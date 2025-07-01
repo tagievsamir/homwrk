@@ -3,12 +3,13 @@
 Конструктор класса должен заполнять эти поля при создании объекта.
 Внутри класса «Товар» написать метод, который выводит информацию об объекте в консоль.*/
 public class Product {
-    String name;
-    String manufactureDate;
-    String manufacturer;
-    String country;
-    double price;
-    boolean reservationStatus;
+    private String name;
+    private String manufactureDate;
+    private String manufacturer;
+    private String country;
+    private double price;
+    private boolean reservationStatus;
+
     public Product(String name, String manufactureDate, String manufacturer, String country,
                    double price, boolean reservationStatus) {
         this.name = name;
@@ -18,6 +19,7 @@ public class Product {
         this.price = price;
         this.reservationStatus = reservationStatus;
     }
+
     public void productInfo() {
         System.out.println(" Product: " + name);
         System.out.println(" Date: " + manufactureDate);
