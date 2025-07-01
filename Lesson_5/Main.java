@@ -1,4 +1,4 @@
-//В методе main() вызвать полученный метод, обработать возможные исключения MyArraySizeException и MyArrayDataException
+//3.В методе main() вызвать полученный метод, обработать возможные исключения MyArraySizeException и MyArrayDataException
 //и вывести результат расчета
 
 public class Main {
@@ -16,6 +16,15 @@ public class Main {
             System.out.println("Сумма: " + result);
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println("Ошибка: " + e.getMessage());
+        }
+//Напишите код для генерации и поимки ArrayIndexOutOfBoundsException.
+        int[] array = new int[3];
+        try {
+            for (int i = 0; i < 4; i++) {
+                array[i] = i * 2;
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
