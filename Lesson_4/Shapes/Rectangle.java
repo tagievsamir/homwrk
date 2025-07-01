@@ -25,18 +25,22 @@ public class Rectangle implements Shape {
         this.fillColor = fillColor;
         this.borderColor = borderColor;
     }
+
     @Override
     public double getArea() {
         return width * height;
     }
+
     @Override
     public double getPerimeter() {
         return 2 * (width + height);
     }
+
     @Override
     public String getFillColor() {
         return fillColor;
     }
+
     @Override
     public String getBorderColor() {
         return borderColor;
