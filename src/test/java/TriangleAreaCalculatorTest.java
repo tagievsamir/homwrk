@@ -1,22 +1,28 @@
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertThrows;
 
 public class TriangleAreaCalculatorTest {
-    @Test
-    @DisplayName("Should return 5.0 for input base = 2, height = 5")
+    @Test(description = "Should return 5.0 for input base = 2, height = 5")
     void testTriangleAreaCalculator() {
-        assertEquals(5.0, TriangleAreaCalculator.calculateArea(2, 5));
+        assertEquals(TriangleAreaCalculator.calculateArea(2, 5), 5.0);
     }
 
-    @DisplayName("Should throw exception when base or height is non-positive")
-    @ParameterizedTest(name = "base: {0}, height: {1} - should throw exception")
-    @CsvSource({"0, 1", "1, 0", "-1, -1"})
+    @DataProvider(name = "dataForBaseHeight")
+    public Object[][] dataForBaseHeight() {
+        return new Object[][]{
+                {0, 1},
+                {1, 0},
+                {-1, -1}
+        };
+    }
+
+    @Test(
+            description = "Should throw exception when base or height is non-positive",
+            dataProvider = "dataForBaseHeight"
+    )
     void testTriangleAreaCalculatorNegativeInput(double base, double height) {
         assertThrows(IllegalArgumentException.class, () -> TriangleAreaCalculator.calculateArea(base, height));
     }

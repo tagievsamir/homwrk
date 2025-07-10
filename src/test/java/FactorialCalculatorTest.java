@@ -1,26 +1,22 @@
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertThrows;
 
 public class FactorialCalculatorTest {
-    @Test
-    @DisplayName("Should return 120 for input 5")
+    @Test(description = "Should return 120 for input 5")
     void testFactorial() {
-        assertEquals(120, FactorialCalculator.factorial(5));
+        assertEquals(FactorialCalculator.factorial(5), 120);
     }
 
-    @Test
-    @DisplayName("Should throw exception when input is negative")
+    @Test(description = "Should throw exception when input is negative")
     void testFactorialWithNegativeInput() {
         assertThrows(IllegalArgumentException.class, () -> {
             FactorialCalculator.factorial(-1);
         });
     }
 
-    @Test
-    @DisplayName("Should throw IllegalArgumentException when input is greater than 20")
+    @Test(description = "Should throw IllegalArgumentException when input is greater than 20")
     void testFactorialWithTooLargeInput() {
         assertThrows(IllegalArgumentException.class, () -> {
             FactorialCalculator.factorial(22);
