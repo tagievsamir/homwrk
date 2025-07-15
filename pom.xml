@@ -22,7 +22,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- TestNG -->
+        <!-- TestNG ->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -30,14 +30,15 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- REST-assured -->
+        <!- REST-assured ->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- Selenium WebDriver -->
+
+        <!- Selenium WebDriver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
