@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.util.List;
-
 public class PaySection extends BasePage {
     private final By blockTitle = By.xpath("//h2[contains(text(), 'Онлайн пополнение')]");
     private final By dropdownButton = By.cssSelector(".select__header");
